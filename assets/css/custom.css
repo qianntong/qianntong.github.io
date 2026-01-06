@@ -1,0 +1,7 @@
+/* Make author avatar square and larger */
+.author__avatar img {
+  border-radius: 0 !important;   /* square instead of circle */
+  width: 200px !important;       /* control size */
+  height: 200px !important;
+  object-fit: cover;             /* prevent distortion */
+}
