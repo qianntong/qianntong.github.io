@@ -1,7 +1,4 @@
 # Site Settings
-head:
-  - <link rel="stylesheet" href="/assets/css/custom.css">
-
 title: "Qianqian Tong"
 subtitle: ""
 name: "Qianqian Tong"
@@ -15,6 +12,10 @@ remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 # Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-include-cache
+
+# Custom CSS
+custom_css:
+  - /assets/css/custom.css
 
 # Author
 author:
