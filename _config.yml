@@ -42,3 +42,12 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+# Disable default blog navigation pages
+breadcrumbs: false
+search: false
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
