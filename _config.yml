@@ -19,15 +19,16 @@ author:
   affiliation: "PhD Student, Civil Engineering, UT Austin"
   email: "qianqian_tong@utexas.edu"
 
-nav:
-  - title: "About"
-    url: /
-  - title: "Research"
-    url: /research/
-  - title: "Blog"
-    url: /blog/
-  - title: "CV"
-    url: /cv/
+navigation:
+  main:
+    - title: "About"
+      url: /
+    - title: "Research"
+      url: /research/
+    - title: "Blog"
+      url: /blog/
+    - title: "CV"
+      url: /cv/
 
 defaults:
   - scope:
