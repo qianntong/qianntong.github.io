@@ -30,6 +30,9 @@ navigation:
     - title: "CV"
       url: /cv/
 
+include:
+  - _pages
+
 defaults:
   - scope:
       path: ""
