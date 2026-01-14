@@ -8,8 +8,9 @@ permalink: /research/
 
 ---
 
-### <span style="font-size:1.25em; font-weight:600;">
-INFORMES: INtermodal Freight Optimization for a Resilient Mobility Energy System
+### 
+<span style="font-size:1.25em;">
+  <strong>INFORMES: INtermodal Freight Optimization for a Resilient Mobility Energy System</strong>
 </span>
 
 <p style="font-size:0.95em; color:#555;">
