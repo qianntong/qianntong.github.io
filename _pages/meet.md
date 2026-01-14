@@ -1,11 +1,11 @@
 ---
-title: "Schedule A Meeting With Me"
+title: "Weekly Schedule"
 layout: single
 permalink: /meet/
 ---
 
 <p style="font-size:1.05em; line-height:1.6;">
-This page shows my weekly availability. Please email me to schedule a meeting!
+This page shows my weekly availability. Please email me to schedule a meeting.
 </p>
 
 <div style="margin-top:1.5em;">
