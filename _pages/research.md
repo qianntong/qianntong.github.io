@@ -37,9 +37,8 @@ Together, the IM and LM provide a holistic modeling environment for evaluating o
 </span>
 
 <p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT); project led by the
-<a href="https://sboyles.github.io/" target="_blank" rel="noopener">
-SPARTA Lab of Dr. Stephen Boyles
+<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT); project led by the SPARTA Lab of
+<a href="https://sboyles.github.io/" target="_blank" rel="noopener"> Dr. Stephen Boyles
 </a>
 </p>
 
