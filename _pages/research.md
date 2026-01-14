@@ -52,4 +52,4 @@ The research synthesizes diverse Texas freight datasets to characterize statewid
 Through systematic analysis of operational interactions under varying demand and capacity scenarios, the project identifies critical network bottlenecks and operational vulnerabilities. The resulting insights support freight planning, infrastructure investment prioritization, and resilience assessment for complex multimodal transportation systems.
 </p>
 
-<img src="/assets/images/texas_multimodal.png" alt="Texas multimodal maritime rail road freight system" style="margin-top:1.2em; margin-bottom:2.2em; width:100%; max-width:900px;" />
+<img src="/assets/images/texas-multimodal.png" alt="Texas multimodal maritime rail road freight system" style="margin-top:1.2em; margin-bottom:2.2em; width:100%; max-width:900px;" />
