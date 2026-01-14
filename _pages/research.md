@@ -4,7 +4,7 @@ layout: single
 permalink: /research/
 ---
 
-## <span style="font-size:1.6em;">Projects</span>
+## <span style="font-size:1.4em;">Projects</span>
 
 ---
 
@@ -33,8 +33,9 @@ Together, the IM and LM provide a holistic modeling environment for evaluating o
 
 ---
 
-### <span style="font-size:1.25em; font-weight:600;">
-Developing a Multi-Modal Maritime–Rail–Road Transportation Model for Texas Inland and Intercoastal Waterways
+### 
+<span style="font-size:1.25em;">
+  <strong>Developing a Multi-Modal Maritime–Rail–Road Transportation Model for Texas Inland and Intercoastal Waterways</strong>
 </span>
 
 <p style="font-size:0.95em; color:#555;">
