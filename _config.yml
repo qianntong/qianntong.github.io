@@ -1,7 +1,7 @@
 title: "Qianqian Tong"
 subtitle: ""
 name: "Qianqian Tong"
-description: "PhD student in Civil Engineering at UT Austin. Research on intermodal terminals, simulation, and optimization."
+description: "PhD student in Transportation Engineering at UT Austin."
 url: "https://qianntong.github.io"
 baseurl: ""
 
@@ -16,8 +16,26 @@ custom_css:
 author:
   name: "Qianqian Tong"
   avatar: "/assets/images/profile.jpeg"
-  affiliation: "PhD Student, Civil Engineering, UT Austin"
+  affiliation: "PhD Student, Transportation Engineering, UT Austin"
   email: "qianqian_tong@utexas.edu"
+
+  links:
+  - label: "Personal Website"
+    icon: "fas fa-globe"
+    url: "https://qianntong.github.io/"
+
+  - label: "TRAIN Lab"
+    icon: "fas fa-university"
+    url: "https://sites.utexas.edu/train/team/"
+
+  - label: "ORCID"
+    icon: "ai ai-orcid"
+    url: "https://orcid.org/0000-0002-4015-8721"
+
+  - label: "LinkedIn"
+    icon: "fab fa-linkedin"
+    url: "https://www.linkedin.com/in/tongqianqian/"
+  
 
 navigation:
   main:
