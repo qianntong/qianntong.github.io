@@ -20,16 +20,13 @@ author:
   email: "qianqian_tong@utexas.edu"
 
   links:
-  - label: "Personal Website"
-    icon: "fas fa-globe"
-    url: "https://qianntong.github.io/"
 
   - label: "TRAIN Lab"
     icon: "fas fa-university"
     url: "https://sites.utexas.edu/train/team/"
 
   - label: "ORCID"
-    icon: "ai ai-orcid"
+    icon: "fas fa-globe"
     url: "https://orcid.org/0000-0002-4015-8721"
 
   - label: "LinkedIn"
