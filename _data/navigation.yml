@@ -5,8 +5,8 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Blog"
-    url: /blog/
+  - title: "Meeting"
+    url: /meet/
 
   - title: "CV"
     url: /assets/tong.pdf
