@@ -1,5 +1,5 @@
 ---
 title: "Blog"
 layout: single
-permalink: /blog/
+permalink: /meet/
 ---
