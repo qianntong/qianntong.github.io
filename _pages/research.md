@@ -4,11 +4,10 @@ layout: single
 permalink: /research/
 ---
 
-## <span style="font-size:1.4em;">Projects</span>
+### Projects
 
 ---
 
-### 
 <span style="font-size:1.25em;">
   <strong>INFORMES: INtermodal Freight Optimization for a Resilient Mobility Energy System</strong>
 </span>
@@ -33,13 +32,15 @@ Together, the IM and LM provide a holistic modeling environment for evaluating o
 
 ---
 
-### 
 <span style="font-size:1.25em;">
   <strong>Developing a Multi-Modal Maritime–Rail–Road Transportation Model for Texas Inland and Intercoastal Waterways</strong>
 </span>
 
 <p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT); project led by the SPARTA Lab under the direction of Dr. Stephen Boyles
+<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT); project led by the
+<a href="https://sboyles.github.io/" target="_blank" rel="noopener">
+SPARTA Lab of Dr. Stephen Boyles
+</a>
 </p>
 
 <p style="font-size:1.05em; line-height:1.6;">
