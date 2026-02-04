@@ -4,7 +4,9 @@ layout: single
 permalink: /research/
 ---
 
-### Projects
+### Ongoing Projects
+
+This section highlights the projects I am currently working on. For a comprehensive overview of my completed and prior work, please refer to my CV.
 
 ---
 
