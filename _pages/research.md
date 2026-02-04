@@ -26,7 +26,7 @@ permalink: /research/
     ALTRIOS
   </a>,
   <a href="https://github.com/qianntong/LIFTS" target="_blank" rel="noopener noreferrer">
-    Line-Haul Intermodal Freight Terminal Simulation (LIFTS)
+    LIFTS
   </a>
 </p>
 
