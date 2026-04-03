@@ -10,7 +10,7 @@ This page displays my general weekly availability (Monday-Friday, 9:00 AM–5:00
 
 <div style="margin-top:1.5em;">
   <iframe
-    src="https://calendar.google.com/calendar/embed?src=qianqian_tong@utexas.edu&ctz=America%2FChicago&mode=WEEK"
+    src="https://calendar.google.com/calendar/embed?src=qianqian_tong@utexas.edu&ctz=America%2FChicago&mode=AGENDA"
     style="border:0"
     width="100%"
     height="650"
