@@ -15,7 +15,7 @@ This section highlights the projects I am currently working on. For a comprehens
 </span>
 
 <p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> U.S. Department of Energy Advanced Research Projects Agency – Energy (ARPA-E); project led by the National Renewable Energy Laboratory (NREL) 
+<strong>Funding Sources:</strong> U.S. Department of Energy Advanced Research Projects Agency – Energy (ARPA-E); project led by the National Laboratory of Rockies (NRL)
 </p>
 
 <p style="font-size:1.05em; line-height:1.6;">
@@ -41,7 +41,7 @@ This section highlights the projects I am currently working on. For a comprehens
 </span>
 
 <p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT); project led by the SPARTA Lab of Dr. Stephen Boyles
+<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT)
 </p>
 
 <p style="font-size:1.05em; line-height:1.6;">
