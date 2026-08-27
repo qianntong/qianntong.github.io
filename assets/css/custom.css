@@ -1,11 +1,370 @@
-/* Make author avatar square and larger */
-.author__avatar img {
-  border-radius: 0 !important;   /* square instead of circle */
-  width: 200px !important;       /* control size */
+/* Author avatar: force a true 200x200 square at every breakpoint.
+   The theme (minimal-mistakes _sidebar.scss) applies:
+     .author__avatar     { width: 36px; height: 36px }   (below $large)
+     .author__avatar img { max-width: 110px; border-radius: 50% }
+     .author__avatar img { padding: 5px; border: 1px solid #f2f3f3 } ($large)
+   The `max-width: 110px` is what clamps the image, so it must be reset
+   alongside width/height; padding + border are zeroed so the rendered
+   image box is exactly 200x200. */
+.author__avatar {
+  display: block !important;
+  width: 200px !important;
   height: 200px !important;
-  object-fit: cover;             /* prevent distortion */
 }
-/* Add spacing below author name in sidebar */
+
+.author__avatar img {
+  width: 200px !important;
+  height: 200px !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: cover;
+}
+
 .author__name {
   margin-bottom: 0.8em;
 }
+
+/* ==========================================================================
+   Research timeline
+   Vertical continuous rail · circular year nodes · projects branch right.
+   ========================================================================== */
+
+.rt {
+  /* geometry */
+  --rt-rail: 104px;          /* width reserved for the year column            */
+  --rt-gap: 26px;            /* horizontal branch length (node -> project)    */
+  --rt-line: 2px;            /* rail / tick thickness                         */
+  --rt-thumb-w: 120px;       /* fixed collapsed thumbnail size                */
+  --rt-thumb-h: 84px;
+  --rt-row-center: 42px;     /* vertical center of a project row (thumb-h/2)  */
+
+  /* palette */
+  --rt-rule: rgba(29, 33, 39, 0.18);
+  --rt-accent: #1d2127;
+  --rt-bg: #ffffff;
+  --rt-media-bg: #f5f5f5;
+  --rt-strong: #1b1d20;
+  --rt-body: #2d3136;
+  --rt-muted: rgba(29, 33, 39, 0.6);
+
+  position: relative;
+  max-width: 720px;
+  margin: 2rem 0 0;
+}
+
+/* ---- year block + continuous vertical line ------------------------------- */
+.rt__year {
+  position: relative;
+  padding-left: calc(var(--rt-rail) + var(--rt-gap));
+  padding-bottom: 34px;
+}
+
+.rt__year:last-child {
+  padding-bottom: 0;
+}
+
+/* each year paints its own segment of the rail; stacked they form one line  */
+.rt__year::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--rt-rail);
+  width: var(--rt-line);
+  background: var(--rt-rule);
+  transform: translateX(-50%);
+}
+
+.rt__year:first-child::before {
+  top: var(--rt-row-center);
+}
+
+.rt__year:last-child::before {
+  bottom: calc(100% - var(--rt-row-center));
+}
+
+/* ---- year label + circular node --------------------------------------- */
+.rt__year-label {
+  position: absolute;
+  left: 0;
+  top: var(--rt-row-center);
+  width: calc(var(--rt-rail) - 18px);
+  text-align: right;
+  transform: translateY(-50%);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--rt-strong);
+}
+
+.rt__node {
+  position: absolute;
+  left: var(--rt-rail);
+  top: var(--rt-row-center);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--rt-accent);
+  box-shadow: 0 0 0 4px var(--rt-bg);
+  transform: translate(-50%, -50%);
+}
+
+/* ---- projects branching to the right --------------------------------- */
+.rt__projects {
+  position: relative;
+}
+
+.rt__project {
+  position: relative;
+}
+
+.rt__project:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* horizontal connector from the rail to each project row */
+.rt__tick {
+  position: absolute;
+  left: calc(-1 * var(--rt-gap));
+  top: var(--rt-row-center);
+  width: var(--rt-gap);
+  height: var(--rt-line);
+  background: var(--rt-rule);
+}
+
+/* ---- collapsed row: thumb + title + tags + toggle ------------------- */
+.rt__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rt__thumb {
+  flex: 0 0 auto;
+  width: var(--rt-thumb-w);
+  height: var(--rt-thumb-h);
+  object-fit: contain;
+  padding: 4px;
+  background: var(--rt-media-bg);
+  border: 1px solid var(--rt-rule);
+  border-radius: 6px;
+}
+
+.rt__meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rt__title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--rt-strong);
+  overflow-wrap: break-word;
+}
+
+.rt__row:hover .rt__title {
+  text-decoration: underline;
+}
+
+.rt__tags {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--rt-muted);
+}
+
+.rt__toggle-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--rt-rule);
+  border-radius: 6px;
+  background: var(--rt-bg);
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--rt-strong);
+}
+
+.rt__row:hover .rt__toggle-icon,
+.rt__row:focus-visible .rt__toggle-icon {
+  border-color: var(--rt-accent);
+}
+
+.rt__row:focus-visible {
+  outline: 2px solid var(--rt-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- expanded detail (one open at a time, toggled via .is-open) ----- */
+.rt__detail {
+  display: none;
+  padding: 14px 0 4px;
+}
+
+.rt__project.is-open .rt__detail {
+  display: block;
+}
+
+.rt__detail-img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  padding: 6px;
+  background: var(--rt-media-bg);
+  border: 1px solid var(--rt-rule);
+  border-radius: 6px;
+}
+
+.rt__summary {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--rt-body);
+}
+
+/* Methods / Papers / Code groups shown side by side in the expanded card */
+.rt__resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 26px;
+  margin-top: 4px;
+}
+
+.rt__resgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.rt__reslabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rt-muted);
+}
+
+.rt__reslist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rt__reslist li {
+  display: flex;
+}
+
+/* plain (non-link) pills — used for Methods */
+.rt__reslist--plain li {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 2px 10px;
+  color: var(--rt-body);
+  border: 1px solid var(--rt-rule);
+  border-radius: 999px;
+}
+
+/* link pills — used for Papers and Code */
+.rt__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 3px 11px;
+  color: var(--rt-body);
+  text-decoration: none;
+  border: 1px solid var(--rt-rule);
+  border-radius: 999px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.rt__link i {
+  font-size: 0.85em;
+  opacity: 0.65;
+}
+
+a.rt__link:hover,
+a.rt__link:focus-visible {
+  border-color: var(--rt-accent);
+  background: var(--rt-media-bg);
+  color: var(--rt-strong);
+}
+
+a.rt__link:focus-visible {
+  outline: 2px solid var(--rt-accent);
+  outline-offset: 2px;
+}
+
+/* listed but no URL yet (e.g. an accepted paper without a link) */
+.rt__link--pending {
+  color: var(--rt-muted);
+  border-style: dashed;
+  cursor: default;
+}
+
+/* ---- mobile: keep the vertical timeline, tighten the geometry ------- */
+@media (max-width: 640px) {
+  .rt {
+    --rt-rail: 54px;
+    --rt-gap: 12px;
+    --rt-thumb-w: 72px;
+    --rt-thumb-h: 52px;
+    --rt-row-center: 26px;
+  }
+
+  .rt__year-label {
+    width: calc(var(--rt-rail) - 20px);
+    font-size: 0.76rem;
+  }
+
+  .rt__row {
+    gap: 8px;
+  }
+
+  .rt__node {
+    width: 12px;
+    height: 12px;
+    box-shadow: 0 0 0 3px var(--rt-bg);
+  }
+
+  .rt__title {
+    font-size: 0.95rem;
+  }
+
+  .rt__toggle-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+
+  .rt__detail-img {
+    max-width: 100%;
+  }
+}
+

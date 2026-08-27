@@ -4,48 +4,136 @@ layout: single
 permalink: /research/
 ---
 
-### Ongoing Projects
+<div class="rt">
+  {% assign years = site.data.research | group_by: "year" | sort: "name" | reverse %}
+  {% for yg in years %}
+    {% assign projects = yg.items | sort: "order" %}
+    <section class="rt__year">
+      <span class="rt__year-label">{{ yg.name }}</span>
+      <span class="rt__node" aria-hidden="true"></span>
 
-This section highlights the projects I am currently working on. For a comprehensive overview of my completed and prior work, please refer to my CV.
+      <div class="rt__projects">
+        {% for p in projects %}
+          {% assign pid = p.title | slugify | append: "-" | append: yg.name %}
+          <article class="rt__project">
+            <span class="rt__tick" aria-hidden="true"></span>
 
----
+            <button class="rt__row" type="button" aria-expanded="false" aria-controls="{{ pid }}-detail">
+              {% if p.visual %}
+                <img class="rt__thumb" src="{{ p.visual | relative_url }}" alt="{{ p.title }}" loading="lazy">
+              {% endif %}
+              <span class="rt__meta">
+                <span class="rt__title">{{ p.title }}</span>
+                {% if p.skills %}
+                  <span class="rt__tags">{{ p.skills | join: " · " }}</span>
+                {% endif %}
+              </span>
+              <span class="rt__toggle-icon" aria-hidden="true">+</span>
+            </button>
 
-<span style="font-size:1.25em;">
-  <strong>INFORMES: INtermodal Freight Optimization for a Resilient Mobility Energy System</strong>
-</span>
+            <div class="rt__detail" id="{{ pid }}-detail" role="region" aria-label="{{ p.title }} details">
+              {% if p.visual %}
+                <img class="rt__detail-img" src="{{ p.visual | relative_url }}" alt="{{ p.title }}" loading="lazy">
+              {% endif %}
+              {% if p.summary %}
+                <p class="rt__summary">{{ p.summary }}</p>
+              {% endif %}
+              {% if p.methods or p.papers or p.code_repos %}
+                <div class="rt__resources">
+                  {% if p.methods %}
+                    <div class="rt__resgroup">
+                      <span class="rt__reslabel">Methods</span>
+                      <ul class="rt__reslist rt__reslist--plain">
+                        {% for m in p.methods %}
+                          <li>{{ m }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
 
-<p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> U.S. Department of Energy Advanced Research Projects Agency – Energy (ARPA-E); project led by the National Laboratory of Rockies (NRL)
-</p>
+                  {% if p.papers %}
+                    <div class="rt__resgroup">
+                      <span class="rt__reslabel">Papers</span>
+                      <ul class="rt__reslist">
+                        {% for paper in p.papers %}
+                          {% assign href = paper.url %}
+                          {% if paper.url %}{% unless paper.url contains "://" %}{% assign href = "https://" | append: paper.url %}{% endunless %}{% endif %}
+                          <li>
+                            {% if paper.url %}
+                              <a class="rt__link" href="{{ href }}" target="_blank" rel="noopener noreferrer"{% if paper.note %} title="{{ paper.note | escape }}"{% endif %}><i class="fas fa-file-lines" aria-hidden="true"></i>{{ paper.label }}</a>
+                            {% else %}
+                              <span class="rt__link rt__link--pending"{% if paper.note %} title="{{ paper.note | escape }}"{% endif %}><i class="fas fa-file-lines" aria-hidden="true"></i>{{ paper.label }}</span>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
 
-<p style="font-size:1.05em; line-height:1.6;">
-  INFORMES proposes to develop a national-level intermodal freight modeling framework to support decision-making in the execution and rollout strategy of decarbonization technologies and guide efficient operations of the intermodal freight system. We are developing an <em>Infrastructure Model (IM)</em> and a <em>Logistics Model (LM)</em>, and integrate them in a Python-based, easily executable and publicly distributable software tool. The IM is designed to model deployment of low-carbon energy sources and systems, transshipment terminals, and emerging vehicle operations, and find the optimal spatial and temporal allocation of resources. The LM generates a robust and holistic optimization of intermodal logistics operations simulating intermodal demand on top of the stochastic transportation system. INFORMES develops a national-level intermodal freight modeling framework to support strategic decision-making for the deployment and operational planning of freight decarbonization technologies. The project aims to guide efficient, resilient operations of the intermodal freight system under emerging energy and mobility paradigms.
-</p>
+                  {% if p.code_repos %}
+                    <div class="rt__resgroup">
+                      <span class="rt__reslabel">Code</span>
+                      <ul class="rt__reslist">
+                        {% for repo in p.code_repos %}
+                          {% assign href = repo.url %}
+                          {% if repo.url %}{% unless repo.url contains "://" %}{% assign href = "https://" | append: repo.url %}{% endunless %}{% endif %}
+                          <li>
+                            {% if repo.url %}
+                              <a class="rt__link" href="{{ href }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i>{{ repo.label }}</a>
+                            {% else %}
+                              <span class="rt__link rt__link--pending"><i class="fab fa-github" aria-hidden="true"></i>{{ repo.label }}</span>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
 
-<p style="font-size:0.95em; color:#555; margin-top:0.6em;">
-  <strong>Code repositories:</strong>
-  <a href="https://github.com/NatLabRockies/altrios" target="_blank" rel="noopener noreferrer">
-    ALTRIOS
-  </a>,
-  <a href="https://github.com/qianntong/LIFTS" target="_blank" rel="noopener noreferrer">
-    LIFTS
-  </a>
-</p>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.rt__row'));
 
-<img src="/assets/images/informes.png" alt="INFORMES intermodal freight modeling framework" style="margin-top:1.2em; margin-bottom:2.2em; width:100%; max-width:900px;" />
+  function close(project) {
+    project.classList.remove('is-open');
+    var row = project.querySelector('.rt__row');
+    var icon = project.querySelector('.rt__toggle-icon');
+    if (row) row.setAttribute('aria-expanded', 'false');
+    if (icon) icon.textContent = '+';
+  }
 
----
+  function open(project) {
+    project.classList.add('is-open');
+    var row = project.querySelector('.rt__row');
+    var icon = project.querySelector('.rt__toggle-icon');
+    if (row) row.setAttribute('aria-expanded', 'true');
+    if (icon) icon.textContent = '−';
+  }
 
-<span style="font-size:1.25em;">
-  <strong>Developing a Multi-Modal Maritime–Rail–Road Transportation Model for Texas Inland and Intercoastal Waterways</strong>
-</span>
+  rows.forEach(function (row) {
+    row.addEventListener('click', function () {
+      var project = row.closest('.rt__project');
+      if (!project) return;
+      var wasOpen = project.classList.contains('is-open');
 
-<p style="font-size:0.95em; color:#555;">
-<strong>Funding Sources:</strong> Texas Department of Transportation (TxDOT)
-</p>
+      document.querySelectorAll('.rt__project.is-open').forEach(function (p) {
+        if (p !== project) close(p);
+      });
 
-<p style="font-size:1.05em; line-height:1.6;">
-This project establishes a statewide multimodal freight modeling framework that integrates maritime, rail, and roadway systems to evaluate commodity flows, infrastructure capacity, and system-level performance across Texas inland and intercoastal waterways. The research synthesizes diverse Texas freight datasets to characterize statewide commodity movements, network topology, and capacity constraints. A network-based discrete-event simulation framework is developed to support multimodal routing and scheduling under time-dependent and uncertain operating conditions, incorporating customized algorithms and uncertainty-aware representations of disruption, risk, and infrastructure vulnerability. The resulting insights support freight planning, infrastructure investment prioritization, and resilience assessment for complex multimodal transportation systems.
-</p>
-
-<img src="/assets/images/texas-multimodal.png" alt="Texas multimodal maritime rail road freight system" style="margin-top:1.2em; margin-bottom:2.2em; width:100%; max-width:900px;" />
+      if (wasOpen) {
+        close(project);
+      } else {
+        open(project);
+      }
+    });
+  });
+});
+</script>

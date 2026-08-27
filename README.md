@@ -1,27 +1,30 @@
-# Minimal Mistakes remote theme starter
+# qianntong.github.io
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Personal academic site for Qianqian Tong, built with [Jekyll](https://jekyllrb.com/)
+and the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) remote
+theme, deployed via GitHub Pages.
 
-Contains basic configuration to get you a site with:
+## Structure
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+| Path | Purpose |
+| --- | --- |
+| `_config.yml` | Site config. Navigation lives in `_data/navigation.yml`. |
+| `index.html` | Home / About page (`/`). |
+| `_pages/research.md` | Research page (`/research/`) — renders the timeline from `_data/research.yml`. |
+| `_pages/meet.md` | Weekly schedule (`/meet/`). |
+| `_data/research.yml` | Source of truth for research projects (year, order, summary, skills, methods, visual). |
+| `_data/navigation.yml` | Top navigation. |
+| `_includes/head/custom.html` | Loads `assets/css/custom.css` (overrides the theme's head include). |
+| `assets/css/custom.css` | All custom styling: the research timeline + author avatar. |
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+## Local preview
 
----
+The pinned `github-pages` gem needs Ruby 3.1.x (Jekyll 3.9 / Liquid 4.0.3 do not
+run on Ruby 3.2+):
 
-## Troubleshooting
+```sh
+bundle install
+bundle exec jekyll serve
+```
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
-
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+GitHub Pages builds the live site remotely, so a local build is only for preview.

@@ -34,16 +34,7 @@ author:
     url: "https://www.linkedin.com/in/tongqianqian/"
   
 
-navigation:
-  main:
-    - title: "About"
-      url: /
-    - title: "Research"
-      url: /research/
-    - title: "Blog"
-      url: /blog/
-    - title: "CV"
-      url: /cv/
+# Site navigation lives in _data/navigation.yml (read by the theme).
 
 include:
   - _pages
@@ -57,14 +48,3 @@ defaults:
 
 breadcrumbs: false
 search: false
-
-collections:
-  posts:
-    output: true
-    permalink: /blog/:title/
-
-category_archive:
-  type: disabled
-
-tag_archive:
-  type: disabled

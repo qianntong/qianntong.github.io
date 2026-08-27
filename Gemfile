@@ -13,5 +13,9 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jemoji"
   gem "jekyll-include-cache"
-  gem "jekyll-algolia"
 end
+
+# Stdlib gems unbundled from Ruby 3.4+/4.0, needed for local `jekyll` builds.
+gem "csv"
+gem "bigdecimal"
+gem "webrick"
