@@ -136,6 +136,11 @@
     - "Corridor planning and optimization"
     - "JAX"
   visual: "/assets/images/fno.png"
+  code_repos:
+    - label: "FNO"
+      url: "https://github.com/qianntong/corridor_alignment"
+    - label: "PINN"
+      url: "https://github.com/qianntong/pinn"
 
 
 - title: "Harness Optimization"
