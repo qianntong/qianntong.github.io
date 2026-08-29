@@ -1,13 +1,16 @@
 - title: "Track Defect Detection"
   year: 2022
   order: 1
-  summary: "Computer vision models for detecting and segmenting railway track defects from inspection imagery."
+  summary: "Computer vision models for automated detection and segmentation of railway track defects from inspection imagery. The system was deployed on a railway inspection vehicle for field applications, and the associated patent (ZL202120098784.1) was transferred to a railway technology company."
   skills:
-    - "ML"
-    - "Software"
+    - "Machine Learning"
+    - "Software Development"
   methods:
     - "Object detection"
-    - "Image segmentation"
+    - "Semantic segmentation"
+    - "HALCON"
+    - "PyTorch"
+    - "PyQt"
   visual: "/assets/images/crack.png"
   papers:
     - label: "CIN 2021"
@@ -25,11 +28,16 @@
     - "Software"
   methods:
     - "Unsupervised learning"
+    - "Scikit-learn"
     - "Clustering"
     - "Self-organizing maps"
+    - "Auto-ML Interpretability"
+    - "U-Net"
   visual: "/assets/images/tumor.png"
   papers:
     - label: "INFORMS 2023"
+    - label: "AAPM 2023"
+      url: "/assets/poster/AAPM2023.pdf"
     - label: "PMB 2024"
       url: "https://dx.doi.org/10.1088/1361-6560/ad6118"
 
@@ -39,7 +47,7 @@
   order: 1
   summary: "Reinforcement learning-based train dispatching to improve railway operational resilience under disturbances."
   skills:
-    - "ML"
+    - "RL"
     - "Optimization"
   methods:
     - "Reinforcement learning"
@@ -55,7 +63,7 @@
 - title: "Layout Optimization"
   year: 2024
   order: 1
-  summary: "Optimization of rail-road intermodal terminal layouts to improve operational flow and resource utilization under service constraints."
+  summary: "First-stage spatial optimization for the LIFTS project, developing a mixed-integer linear programming model for Parallel Systems' micro-terminal layout design under capacity and spatial constraints, with the objective of minimizing total system travel distance."
   skills:
     - "Optimization"
   methods:
@@ -65,23 +73,30 @@
   visual: "/assets/images/optimal_layout.png"
   papers:
     - label: "IAROR 2025"
+      url: "https://railtec.illinois.edu/2025/04/20/railtec-faculty-students-alumni-at-raildresden-2025/"
       note: "11th International Conference on Railway Operations Modelling and Analysis, Dresden, Germany"
 
 
 - title: "LIFTS"
   year: 2024
   order: 2
-  summary: "Intermodal terminal simulation and operational modeling for freight-handling performance under dynamic operating conditions."
+  summary: >-
+    Discrete-event simulation and operational modeling of intermodal terminals
+    to evaluate freight-handling performance under dynamic operating conditions.
+    LIFTS has been integrated into ALTRIOS, an open-source digital-twin and simulation
+    platform for modeling railway energy, safety, and operations. ALTRIOS has received
+    two R&D 100 Awards, recognizing it among the year's most innovative technologies.
   skills:
-    - "Simulation"
-    - "Optimization"
+    - "Digital Twin"
+    - "Software"
   methods:
     - "Discrete-event simulation"
     - "SimPy"
-    - "Terminal operations"
+    - "Terminal operations modeling"
   visual: "/assets/images/informes.png"
   papers:
-    - label: "TRB 2025"
+    - label: "TRB 2026"
+      url: "assets/poster/TRB2026.pdf"
   code_repos:
     - label: "LIFTS"
       url: "https://github.com/qianntong/LIFTS"
@@ -89,16 +104,17 @@
       url: "https://github.com/NatLabRockies/altrios"
 
 
-- title: "GIS + ALTRIOS"
+- title: "Automated Corridor Modeling"
   year: 2025
   order: 1
-  summary: "Large-scale spatial freight modeling that combines GIS analytics with fleet and logistics simulation to support system-level planning."
+  summary: "An automated and reproducible pipeline for constructing simulation-ready corridors between arbitrary origin-destination pairs, integrating OpenStreetMap and EPQS APIs to extract route alignments and horizontal and vertical terrain profiles from open-source geospatial data, with direct integration into ALTRIOS for energy and operational simulation."
   skills:
     - "Simulation"
     - "Software"
-  methods:
     - "GIS"
-    - "Freight simulation"
+  methods:
+    - "Automated data pipeline"
+    - "Geospatial Modeling"
     - "Python"
   visual: "/assets/images/gis.png"
   code_repos:
@@ -113,15 +129,16 @@
   order: 2
   summary: "Corridor alignment and strategic network design using analytical and data-driven methods to balance demand, cost, and resilience."
   skills:
-    - "ML"
+    - "SciML"
   methods:
     - "Spatial analysis"
-    - "Optimization"
-    - "Corridor planning"
+    - "Physics-informed modeling"
+    - "Corridor planning and optimization"
+    - "JAX"
   visual: "/assets/images/fno.png"
 
 
-- title: "LLM + Harness"
+- title: "Harness Optimization"
   year: 2026
   order: 1
   summary: "Agentic AI systems for research automation and workflow orchestration, combining language models with structured task execution."
@@ -147,6 +164,7 @@
     - "Assignment models"
     - "Multimodal planning"
   visual: "/assets/images/texas-multimodal.png"
-
-
+  code_repos:
+    - label: "Texas multimodal routing model"
+      url: "https://github.com/spartalab/texas_routing"
 
