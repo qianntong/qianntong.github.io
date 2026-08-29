@@ -1,0 +1,11 @@
+<!-- start custom head snippets -->
+
+{% if site.custom_css %}
+  {% for stylesheet in site.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+  {% endfor %}
+{% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+{% endif %}
+
+<!-- end custom head snippets -->

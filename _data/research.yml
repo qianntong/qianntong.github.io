@@ -1,0 +1,152 @@
+- title: "Track Defect Detection"
+  year: 2022
+  order: 1
+  summary: "Computer vision models for detecting and segmenting railway track defects from inspection imagery."
+  skills:
+    - "ML"
+    - "Software"
+  methods:
+    - "Object detection"
+    - "Image segmentation"
+  visual: "/assets/images/crack.png"
+  papers:
+    - label: "CIN 2021"
+      url: "https://onlinelibrary.wiley.com/doi/10.1155/2021/2565500"
+    - label: "JAT 2022"
+      url: "https://hindawi.com/journals/jat/2022/7851562/"
+
+
+- title: "Tumor Segmentation"
+  year: 2022
+  order: 2
+  summary: "An unsupervised clustering-based model for clinical tumor subregion delineation in medical imaging."
+  skills:
+    - "ML"
+    - "Software"
+  methods:
+    - "Unsupervised learning"
+    - "Clustering"
+    - "Self-organizing maps"
+  visual: "/assets/images/tumor.png"
+  papers:
+    - label: "INFORMS 2023"
+    - label: "PMB 2024"
+      url: "https://dx.doi.org/10.1088/1361-6560/ad6118"
+
+
+- title: "Dispatching Optimization"
+  year: 2023
+  order: 1
+  summary: "Reinforcement learning-based train dispatching to improve railway operational resilience under disturbances."
+  skills:
+    - "ML"
+    - "Optimization"
+  methods:
+    - "Reinforcement learning"
+    - "Actor-critic"
+    - "Train dispatching"
+    - "Disruption management"
+  visual: "/assets/images/routing.png"
+  code_repos:
+    - label: "Flatland"
+      url: "https://github.com/flatland-association/flatland-rl"
+
+
+- title: "Layout Optimization"
+  year: 2024
+  order: 1
+  summary: "Optimization of rail-road intermodal terminal layouts to improve operational flow and resource utilization under service constraints."
+  skills:
+    - "Optimization"
+  methods:
+    - "Mixed-integer programming"
+    - "Terminal layout planning"
+    - "Facility design"
+  visual: "/assets/images/optimal_layout.png"
+  papers:
+    - label: "IAROR 2025"
+      note: "11th International Conference on Railway Operations Modelling and Analysis, Dresden, Germany"
+
+
+- title: "LIFTS"
+  year: 2024
+  order: 2
+  summary: "Intermodal terminal simulation and operational modeling for freight-handling performance under dynamic operating conditions."
+  skills:
+    - "Simulation"
+    - "Optimization"
+  methods:
+    - "Discrete-event simulation"
+    - "SimPy"
+    - "Terminal operations"
+  visual: "/assets/images/informes.png"
+  papers:
+    - label: "TRB 2025"
+  code_repos:
+    - label: "LIFTS"
+      url: "https://github.com/qianntong/LIFTS"
+    - label: "ALTRIOS"
+      url: "https://github.com/NatLabRockies/altrios"
+
+
+- title: "GIS + ALTRIOS"
+  year: 2025
+  order: 1
+  summary: "Large-scale spatial freight modeling that combines GIS analytics with fleet and logistics simulation to support system-level planning."
+  skills:
+    - "Simulation"
+    - "Software"
+  methods:
+    - "GIS"
+    - "Freight simulation"
+    - "Python"
+  visual: "/assets/images/gis.png"
+  code_repos:
+    - label: "ALTRIOS-GIS"
+      url: "https://github.com/qianntong/altrios-gis"
+    - label: "OpenRail"
+      url: "https://github.com/qianntong/OpenRail"
+
+
+- title: "Rail Corridor Alignment"
+  year: 2025
+  order: 2
+  summary: "Corridor alignment and strategic network design using analytical and data-driven methods to balance demand, cost, and resilience."
+  skills:
+    - "ML"
+  methods:
+    - "Spatial analysis"
+    - "Optimization"
+    - "Corridor planning"
+  visual: "/assets/images/fno.png"
+
+
+- title: "LLM + Harness"
+  year: 2026
+  order: 1
+  summary: "Agentic AI systems for research automation and workflow orchestration, combining language models with structured task execution."
+  skills:
+    - "Agentic AI"
+    - "Software"
+  methods:
+    - "Large language models"
+    - "Tool orchestration"
+    - "Workflow automation"
+  visual: "/assets/images/ai.png"
+
+
+- title: "Multimodal Assignment"
+  year: 2026
+  order: 2
+  summary: "Assignment and routing optimization across multimodal transport networks for resilient and cost-aware logistics decisions."
+  skills:
+    - "Optimization"
+    - "Simulation"
+  methods:
+    - "Network optimization"
+    - "Assignment models"
+    - "Multimodal planning"
+  visual: "/assets/images/texas-multimodal.png"
+
+
+
