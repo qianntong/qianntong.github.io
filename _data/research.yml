@@ -51,7 +51,7 @@
     - "Optimization"
   methods:
     - "Reinforcement learning"
-    - "Actor-critic"
+    - "Actor-critic algorithm"
     - "Train dispatching"
     - "Disruption management"
   visual: "/assets/images/routing.png"
@@ -69,6 +69,7 @@
   methods:
     - "Mixed-integer programming"
     - "Terminal layout planning"
+    - "Heuristic algorithm"
     - "Facility design"
   visual: "/assets/images/optimal_layout.png"
   papers:
@@ -90,9 +91,11 @@
     - "Digital Twin"
     - "Software"
   methods:
-    - "Discrete-event simulation"
-    - "SimPy"
     - "Terminal operations modeling"
+    - "Discrete-event simulation"
+    - "Queuing theory"
+    - "SimPy"
+    - "ALTRIOS"
   visual: "/assets/images/informes.png"
   papers:
     - label: "TRB 2026"
@@ -113,8 +116,10 @@
     - "Software"
     - "GIS"
   methods:
+    - "Workflow automation"
     - "Automated data pipeline"
-    - "Geospatial Modeling"
+    - "Geospatial modeling"
+    - "Signal smoothing"
     - "Python"
   visual: "/assets/images/gis.png"
   code_repos:
@@ -134,7 +139,9 @@
     - "Spatial analysis"
     - "Physics-informed modeling"
     - "Corridor planning and optimization"
+    - "Signal alignment"
     - "JAX"
+    - "PyTorch"
   visual: "/assets/images/fno.png"
   code_repos:
     - label: "FNO"
@@ -167,7 +174,6 @@
   methods:
     - "Network optimization"
     - "Assignment models"
-    - "Multimodal planning"
   visual: "/assets/images/texas-multimodal.png"
   code_repos:
     - label: "Texas multimodal routing model"
