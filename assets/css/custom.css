@@ -22,8 +22,18 @@
   object-fit: cover;
 }
 
-.author__name {
-  margin-bottom: 0.8em;
+/* Even vertical rhythm in the author sidebar: the gap below the name
+   matches the gap between links (a uniform 8px box-to-box).
+   `.sidebar .author__name` is needed to beat the theme's
+   `.sidebar h3 { margin-bottom: 0 }`; the links get padding-block: 0
+   so their 8px margin-bottom is the whole gap. */
+.sidebar .author__name {
+  margin-bottom: 8px;
+}
+
+.author__urls a {
+  margin-bottom: 8px;
+  padding-block: 0;
 }
 
 /* ==========================================================================
