@@ -178,6 +178,6 @@
     - "Assignment models"
   visual: "/assets/images/texas-multimodal.png"
   code_repos:
-    - label: "Texas multimodal routing model"
+    - label: "Multimodal routing model"
       url: "https://github.com/spartalab/texas_routing"
 
