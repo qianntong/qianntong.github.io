@@ -60,7 +60,7 @@
       url: "https://github.com/flatland-association/flatland-rl"
 
 
-- title: "Layout Optimization"
+- title: "Optimal Layout"
   year: 2024
   order: 1
   summary: "First-stage spatial optimization for the LIFTS project, developing a mixed-integer linear programming model for Parallel Systems' micro-terminal layout design under capacity and spatial constraints, with the objective of minimizing total system travel distance."
@@ -127,6 +127,8 @@
       url: "https://github.com/qianntong/altrios-gis"
     - label: "OpenRail"
       url: "https://github.com/qianntong/OpenRail"
+  papers:
+    - label: "JRRT 2026"
 
 
 - title: "Rail Corridor Alignment"
