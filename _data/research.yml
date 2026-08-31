@@ -98,8 +98,8 @@
     - "ALTRIOS"
   visual: "/assets/images/informes.png"
   papers:
-    - label: "TRB 2026"
-      url: "assets/poster/TRB2026.pdf"
+    - label: "TRR 2026"
+      url: "https://journals.sagepub.com/doi/10.1177/03611981261476027"
   code_repos:
     - label: "LIFTS"
       url: "https://github.com/qianntong/LIFTS"
