@@ -156,20 +156,22 @@
       url: "https://openreview.net/forum?id=c8P9NQVtmnO"
 
 
-- title: "Harness Optimization"
+- title: "Execution-Graph Harness Optimization"
   year: 2026
   order: 1
-  summary: "Harness optimization for efficient, reliable, and transferable LLM agents through execution-graph modeling and cost-aware search."
+  summary: "Optimizing LLM-agent harnesses through causal execution graphs, cost-aware search, and transferable online policies for faster and more reliable agent execution."
   skills:
     - "Agentic AI"
-    - "Software"
+    - "Optimization"
+    - "AI Systems"
   methods:
-    - "Large language models"
-    - "Tool orchestration"
-    - "Workflow automation"
+    - "Causal execution graphs"
+    - "Constrained optimization"
+    - "Multi-fidelity search"
+    - "Online policy learning"
   visual: "/assets/images/ai.png"
   code_repos:
-    - label: "AgentIR"
+    - label: "AgentPerf"
       url: "https://github.com/qianntong/AgentPerf"
 
 
