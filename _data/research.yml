@@ -129,12 +129,13 @@
       url: "https://github.com/qianntong/OpenRail"
   papers:
     - label: "JRRT 2026"
+      url: "https://journals.sagepub.com/toc/PIF/current"
 
 
 - title: "Rail Corridor Alignment"
   year: 2025
   order: 2
-  summary: "Corridor alignment and strategic network design using analytical and data-driven methods to balance demand, cost, and resilience."
+  summary: "Developed a Fourier Neural Operator to learn spatial mappings from publicly available rail corridor features to official reference profiles, improving feature alignment, data consistency, and downstream simulation fidelity."
   skills:
     - "SciML"
   methods:
@@ -150,12 +151,15 @@
       url: "https://github.com/qianntong/corridor_alignment"
     - label: "PINN"
       url: "https://github.com/qianntong/pinn"
+  reference:
+    - label: "FNO"
+      url: "https://openreview.net/forum?id=c8P9NQVtmnO"
 
 
 - title: "Harness Optimization"
   year: 2026
   order: 1
-  summary: "Agentic AI systems for research automation and workflow orchestration, combining language models with structured task execution."
+  summary: "Harness optimization for efficient, reliable, and transferable LLM agents through execution-graph modeling and cost-aware search."
   skills:
     - "Agentic AI"
     - "Software"
@@ -164,6 +168,9 @@
     - "Tool orchestration"
     - "Workflow automation"
   visual: "/assets/images/ai.png"
+  code_repos:
+    - label: "AgentIR"
+      url: "https://github.com/qianntong/AgentPerf"
 
 
 - title: "Multimodal Assignment"
