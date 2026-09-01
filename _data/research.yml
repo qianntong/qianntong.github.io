@@ -156,7 +156,7 @@
       url: "https://openreview.net/forum?id=c8P9NQVtmnO"
 
 
-- title: "Execution-Graph Harness Optimization"
+- title: "Harness Optimization"
   year: 2026
   order: 1
   summary: "Optimizing LLM-agent harnesses through causal execution graphs, cost-aware search, and transferable online policies for faster and more reliable agent execution."
