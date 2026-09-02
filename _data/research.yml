@@ -96,7 +96,7 @@
     - "Queuing theory"
     - "SimPy"
     - "ALTRIOS"
-  visual: "/assets/images/informes.png"
+  visual: "/assets/images/lifts.png"
   papers:
     - label: "TRR 2026"
       url: "https://journals.sagepub.com/doi/10.1177/03611981261476027"
