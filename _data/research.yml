@@ -1,7 +1,7 @@
 - title: "Track Defect Detection"
   year: 2022
   order: 1
-  summary: "Computer vision models for automated detection and segmentation of railway track defects from inspection imagery. The system was deployed on a railway inspection vehicle for field applications, and the associated patent (ZL202120098784.1) was transferred to a railway technology company."
+  summary: "Computer vision models for automated detection and segmentation of railway track defects from inspection imagery. The system was deployed on a railway inspection vehicle for field applications, and the associated patent (ZL202120098784.1) was sold to a railway technology company."
   skills:
     - "ML"
     - "Software"
