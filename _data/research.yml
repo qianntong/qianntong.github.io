@@ -100,6 +100,8 @@
   papers:
     - label: "TRR 2026"
       url: "https://journals.sagepub.com/doi/10.1177/03611981261476027"
+    - label: "TRIP 2026"
+      url: "https://www.sciencedirect.com/journal/transportation-research-interdisciplinary-perspectives"
   code_repos:
     - label: "LIFTS"
       url: "https://github.com/qianntong/LIFTS"
@@ -161,9 +163,8 @@
   order: 1
   summary: "Optimizing LLM-agent harnesses through causal execution graphs, cost-aware search, and transferable online policies for faster and more reliable agent execution."
   skills:
-    - "Agentic AI"
+    - "Harness Design"
     - "Optimization"
-    - "AI Systems"
   methods:
     - "Causal execution graphs"
     - "Constrained optimization"
@@ -173,6 +174,9 @@
   code_repos:
     - label: "AgentPerf"
       url: "https://github.com/qianntong/AgentPerf"
+  paper:
+    - label: "ICLR 2027"
+      url: "https://iclr.cc/"
 
 
 - title: "Multimodal Assignment"
@@ -189,4 +193,7 @@
   code_repos:
     - label: "Multimodal routing model"
       url: "https://github.com/spartalab/texas_routing"
+  papers:
+    - label: "JRTPM 2026"
+      url: "https://www.sciencedirect.com/journal/journal-of-rail-transport-planning-and-management"
 
