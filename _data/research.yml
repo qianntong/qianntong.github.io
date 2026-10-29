@@ -131,7 +131,7 @@
       url: "https://github.com/qianntong/OpenRail"
   papers:
     - label: "JRRT 2026"
-      url: "https://doi.org/10.1177/09544097261492758t"
+      url: "https://doi.org/10.1177/09544097261492758"
 
 
 - title: "Rail Corridor Alignment"
@@ -158,9 +158,27 @@
       url: "https://openreview.net/forum?id=c8P9NQVtmnO"
 
 
-- title: "Harness Optimization"
+- title: "Pricing-Game Model"
   year: 2026
   order: 1
+  summary: "Equilibrium framework for how parallel system autonomous platoon price, batch, and compete for market share when entering the Texas intermodal container market."
+  skills:
+    - "Game Theory"
+    - "Equilibrium"
+    - "Optimization"
+  methods:
+    - "Stochastic user equilibrium"
+    - "Nash equilibrium"
+    - "Variational inequality"
+  visual: "/assets/images/texas_intermodal.png"
+  code_repos:
+    - label: "TxNet"
+      url: "https://github.com/qianntong/txnet"
+
+
+- title: "Harness Optimization"
+  year: 2026
+  order: 2
   summary: "Optimizing LLM-agent harnesses through causal execution graphs, cost-aware search, and transferable online policies for faster and more reliable agent execution."
   skills:
     - "Harness Design"
@@ -181,7 +199,7 @@
 
 - title: "Multimodal Assignment"
   year: 2026
-  order: 2
+  order: 3
   summary: "Assignment and routing optimization across multimodal transport networks for resilient and cost-aware logistics decisions."
   skills:
     - "Optimization"
@@ -196,4 +214,3 @@
   papers:
     - label: "JRTPM 2026"
       url: "https://www.sciencedirect.com/journal/journal-of-rail-transport-planning-and-management"
-
